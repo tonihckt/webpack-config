@@ -16,8 +16,10 @@ console.log(data)
 function App () {
     // HOOKS
     const [loaderList, setLoaderList] = useState([])
-    function handleClick() {
+    async function handleClick() {
       setLoaderList(data.loaders)
+      const {alerta} = await import('./alert.js') // es como hacer un feach
+      alerta('OMG! MODULO CARGADO DIMAMICAMENTE')
     }
     return (
         <div>

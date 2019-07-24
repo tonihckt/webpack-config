@@ -18,9 +18,11 @@
     "build:prepro": "webpack-dev-server --config ./webpack.config.js",
     "build:notDuplication": "webpack --config ./webpack.config.js",
     "build:dll": "webpack --config ./webpack.dll.config.js",
-    "build:prevent-duplication-fast": "webpack --config ./webpack.config.js"
+    "build:prevent-duplication-fast": "webpack --config ./webpack.config.js",
+    "build:dynamic:dll": "webpack --config ./webpack.dll.config.js",
+    "build:dynamic": "webpack --config ./webpack.config.js"
   },
-  "author": "",
+  "author": "AAV",
   "license": "ISC",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",

@@ -17,7 +17,10 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].js',
+    // lee desde esta ruta
+    publicPath: 'dist/',
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
     /**
     * ------------------------------------------------------------------------
