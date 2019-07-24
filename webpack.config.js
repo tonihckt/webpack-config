@@ -24,7 +24,7 @@ module.exports = {
     devServer: {
         hot: true,
         open: true,
-        port: 9000,
+        port: 5572,
     },
     /**
     * ------------------------------------------------------------------------
@@ -33,13 +33,20 @@ module.exports = {
     **/
    module: {
         rules: [
+            // JS _ BABEL
+            {
+                test: /\.js$/,
+                use: 'babel-loader',
+                exclude: /node_modules/,
+            },
+            // CSS 
             {
                 test: /\.css$/,
                 use: [
-                    {
-                      loader: MiniCSSExtractPlugin.loader
-                    },
-                    // 'style-loader', // lee un fichero css
+                    // {
+                    //   loader: MiniCSSExtractPlugin.loader
+                    // },
+                    'style-loader', // lee un fichero css
                     'css-loader'
                 ]
             }
@@ -53,13 +60,13 @@ module.exports = {
    plugins:[
     new webpack.HotModuleReplacementPlugin(), // solo cargar funciones que se quiere recargar
     new HtmlWebpackPlugin({
-        title: 'Plugins',
+        title: 'webpack-dev-server',
         // minify: {
 		// collapseWhitespace: true
 	    // }
     }),
-    new MiniCSSExtractPlugin({
-      filename: 'css/[name].css'
-    })
+    // new MiniCSSExtractPlugin({
+    //   filename: 'css/[name].css'
+    // })
   ]
 }

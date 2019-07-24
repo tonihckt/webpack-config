@@ -1,7 +1,8 @@
 {
   "name": "config-webpack",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "config-webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,12 +11,19 @@
     "build:multi-points": "webpack --config ./webpack.config.js",
     "build:loader-styles": "webpack --config ./webpack.config.js",
     "build:plugins": "webpack --config ./webpack.config.js",
-    "build:dev": "webpack-dev-server --config ./webpack.config.js"
+    "build:dev": "webpack-dev-server --config ./webpack.config.js",
+    "build:babel": "webpack-dev-server --config ./webpack.config.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.5.5"
+  },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",

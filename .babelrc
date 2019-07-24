@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    // Pluguin asyn
+    "@babel/plugin-transform-runtime"
+  ],
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
