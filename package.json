@@ -15,7 +15,10 @@
     "build:babel": "webpack-dev-server --config ./webpack.config.js",
     "build:react": "webpack-dev-server --config ./webpack.config.js",
     "build:urlLoader": "webpack-dev-server --config ./webpack.config.js",
-    "build:prepro": "webpack-dev-server --config ./webpack.config.js"
+    "build:prepro": "webpack-dev-server --config ./webpack.config.js",
+    "build:notDuplication": "webpack --config ./webpack.config.js",
+    "build:dll": "webpack --config ./webpack.dll.config.js",
+    "build:prevent-duplication-fast": "webpack --config ./webpack.config.js"
   },
   "author": "",
   "license": "ISC",
