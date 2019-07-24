@@ -49,7 +49,18 @@ module.exports = {
                     'style-loader', // lee un fichero css
                     'css-loader'
                 ]
-            }
+            },
+            // URL - LOADER
+            {
+                test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
+                use: {
+                  loader: 'url-loader',
+                  options: {
+                      // BASE 64
+                    limit: 900000,
+                  }
+                }
+            },
         ]
     },
     /**

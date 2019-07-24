@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src:url('../fonts/Open_Sans/OpenSans-Light.ttf') format('ttf'),
+      url('../fonts/Open_Sans/OpenSans-LightItalic.ttf') format('ttf');
+      font-weight: 300;
+      font-style: italic;
+
+  src:url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('ttf'),
+      url('../fonts/Open_Sans/OpenSans-RegularItalic.ttf') format('ttf');
+      font-weight: 400;
+      font-style: regular;
+
+  src:url('../fonts/Open_Sans/OpenSans-SemiBold.ttf') format('ttf'),
+      url('../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf') format('ttf');
+      font-weight: 600;
+      font-style: semi-bold;
+
+  src:url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('ttf'),
+      url('../fonts/Open_Sans/OpenSans-BoldItalic.ttf') format('ttf');
+      font-weight: 700;
+      font-style: bold;
+
+  src:url('../fonts/Open_Sans/OpenSans-ExtraBold.ttf') format('ttf'),
+      url('../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf') format('ttf');
+      font-weight: 800;
+      font-style: extra-bold;  
+}
+
 body {
   background: lightblue;
   background: lightskyblue;
@@ -7,8 +35,8 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 40px;
-  font-family: Arial;
-  font-family: system-ui;
+  font-family: 'Open Sans', sans-serif;
+  /* font-family: system-ui; */
   color: white;
   text-shadow: 1px 1px 1px black;
   /* animation: 300ms latido infinite; */
