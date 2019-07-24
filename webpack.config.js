@@ -61,6 +61,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(), // solo cargar funciones que se quiere recargar
     new HtmlWebpackPlugin({
         title: 'webpack-dev-server',
+        // cuando renderizas archivos react
+        template: path.resolve(__dirname,'index.html'),
         // minify: {
 		// collapseWhitespace: true
 	    // }
