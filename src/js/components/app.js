@@ -4,6 +4,12 @@ import Loader from './loader'
 import logo from '../../images/logo.png'
 import video from '../../videos/T_I - T_L_I_K_T_B.mp4'
 
+// import types of styles
+import '../../css/sass/sass.scss'
+import '../../css/less/less.less'
+import '../../css//stylus/stylus.styl'
+
+
 console.log(data)
 
 
@@ -16,6 +22,12 @@ function App () {
     return (
         <div>
             <h1>Aplicación con React</h1>
+            <div>
+              <p className="sass">sass</p>
+              <p className="stylus">stylus</p>
+              <p className="less">less</p>
+              <p className="post-css">post-css</p>
+            </div>
             <video src={video} width={360} controls poster={logo}></video>
             <p>
                 <img src={logo} alt="" width={40}/>

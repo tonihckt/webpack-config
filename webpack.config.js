@@ -23,7 +23,7 @@ module.exports = {
     // CONFIG SERVER
     devServer: {
         hot: true,
-        open: true,
+        // open: true,
         port: 5572,
     },
     /**
@@ -43,11 +43,51 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
+                    'style-loader', // lee un fichero css
+                  {
+                    // loader: MiniCSSExtractPlugin.loader,
+                    loader: 'css-loader',
+                    options: {
+                      importLoaders: 1
+                    }
+                  },
+                  'postcss-loader',
+                ]
+            },            
+            // SASS
+            {
+                test: /\.scss$/,
+                use: [
                     // {
                     //   loader: MiniCSSExtractPlugin.loader
                     // },
                     'style-loader', // lee un fichero css
-                    'css-loader'
+                    'css-loader',
+                    'sass-loader',
+                ]
+            },
+           // LESS
+            {
+                test: /\.less$/,
+                use: [
+                    // {
+                    //   loader: MiniCSSExtractPlugin.loader
+                    // },
+                    'style-loader', // lee un fichero css
+                    'css-loader',
+                    'less-loader',
+                ]
+            },
+           // STYLUS
+            {
+                test: /\.styl$/,
+                use: [
+                    // {
+                    //   loader: MiniCSSExtractPlugin.loader
+                    // },
+                    'style-loader', // lee un fichero css
+                    'css-loader',
+                    'stylus-loader',
                 ]
             },
             // URL - LOADER

@@ -1,5 +1,5 @@
 console.log('estas en index');
-import'../css/index.css';
+import'../css/styles.css';
 
 // // Import function
 // import greeting from './greeting.js';
